@@ -1,0 +1,62 @@
+{% extends "base_admin.html" %}
+{% block title %}Statistics{% endblock %}
+
+{% block content %}
+<body>
+
+
+<h1 class="display-4" align="center">Statistics</h1>
+    <br>
+
+<table border="1" align="center" bgcolor='white' style="margin-bottom:50px">
+    <thead>
+    <tr align="center">
+        <th style="font-size:15px">Fruits Type</th>
+        <th>Information</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td align="center"><img src="/static/img/fresh_apple.jpg" alt="Red Apple" width="120" height="100" style="margin:15px"><br><span style="text-align:center">Red Apples</span></td>
+        <td><img src="/static/img/Line_Chart.png" alt="Bar Graph" style="padding-top:50px; margin-bottom:50px"><img src="/static/img/dropup.jpg" alt="up_arrow" align="top" width="40" height="40" style="margin-bottom:100%; margin-left:15px"></td>
+        <td align="center" style="font-size:25px; padding:15px">5000</td>
+        <td align="center" style="font-size:25px; padding:15px">$1 / KG </td>
+        <td align="center" style="font-size:25px; padding:15px">$5000</td>
+    </tr>
+    <tr>
+        <td align="center"><img src="/static/img/Brocoli.png" alt="Broccoli" width="100" height="110" style="margin:15px"><br><span style="text-align:center">Broccoli</span></td>
+        <td><img src="/static/img/Line_Chart.png" alt="Bar Graph" style="padding-top:50px; margin-bottom:50px"> <img src="/static/img/dropup.jpg" alt="down_arrow"  width="40" height="40" style="margin-bottom:100%; margin-left:15px"> </td>
+        <td align="center" style="font-size:25px; padding:15px">3500</td>
+        <td align="center" style="font-size:25px; padding:15px">$1.80 / KG </td>
+        <td align="center" style="font-size:25px; padding:15px">$6300</td>
+    </tr>
+    <tr>
+        <td align="center">Oranges</td>
+        <td align="center"><span style="margin-right:150px; margin-left:240px">Sales graph</span><img src="/static/img/dropdown.jpg" alt="down_arrow" align="top" width="40" height="40" style="margin-left:60px"></td>
+        <td align="center" style="font-size:25px; padding:15px">5000</td>
+        <td align="center" style="font-size:25px; padding:15px">$1.20 / KG </td>
+        <td align="center" style="font-size:25px; padding:15px">$6000</td>
+    </tr>
+    <tr>
+        <td align="center">Chye Sim</td>
+        <td align="center"><span style="margin-right:150px; margin-left:240px">Sales graph</span><img src="/static/img/dropdown.jpg" alt="down_arrow" align="top" width="40" height="40" style="margin-left:60px"></td>
+        <td align="center" style="font-size:25px; padding:15px">3500</td>
+        <td align="center" style="font-size:25px; padding:15px">$0.80 / KG </td>
+        <td align="center" style="font-size:25px; padding:15px">$2800</td>
+    </tr>
+    <tr>
+        <td align="center">Cabbage</td>
+        <td align="center"><span style="margin-right:150px; margin-left:240px">Sales graph</span><img src="/static/img/dropdown.jpg" alt="down_arrow" align="top" width="40" height="40" style="margin-left:60px"></td>
+        <td align="center" style="font-size:25px; padding:15px">3500</td>
+        <td align="center" style="font-size:25px; padding:15px">$0.80 / KG </td>
+        <td align="center" style="font-size:25px; padding:15px">$2800</td>
+    </tr>
+    </tbody>
+
+</table>
+</div>
+</body>
+{% endblock %}

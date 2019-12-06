@@ -1,0 +1,52 @@
+{% extends "base2.html" %}
+{% block title %}Cart page{% endblock %}
+
+{% block content %}
+
+
+<div style="margin-left:25%;margin-right:5%; margin-top:5%; padding-right:0;">
+    <h1 class="display-4" style="padding-right:0">Cart</h1>
+
+    <div style="border-style:solid;border-width:1px;display:inline-block;border-radius:10px;float:right;margin-right:15%;text-align:center;">
+        <h2>Summary</h2>
+        <ul style="text-align:left ; padding-right:40px;padding-bottom:5%; ">
+            <li style="margin-top:7px;">Red Onions - $3.00</li>
+            <li style="margin-top:7px;">Carrots - $4.00</li>
+            <li style="margin-top:7px;">Cucumbers - $7.20</li>
+        </ul>
+        <h5>Total : $14.20</h5>
+        <a class="nav-link" style=" broder-radius:10px;width:90%;margin:auto;margin-bottom:5px;background-color:#527FEF;color:white;padding:2px;text-align:center;" href="/payment">Proceed to payment</a>
+    </div>
+
+    <table style="border-width:1px;display:inline-block;float:left;margin-left:0">
+        <tr >
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center; ">Item</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Quantity</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Price</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;"></th>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/ronion.jpg" alt="red onion" height="120px" width="120px" style="padding-right:5px;"> Red Onion</td>
+            <td style="padding:5px;margin:auto;text-align:center;">- <div style="border-style:solid;border-width:1px;width:70px; display:inline-block">1000g</div> +</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$3.00</td>
+            <td style="padding:5px;margin:auto;text-align:center;color:red;">Remove</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/carrot.jpg" alt="carrot" height="120px" width="120px" style="padding-right:5px;"> Carrot</td>
+            <td style="padding:5px;margin:auto;text-align:center;">- <div style="border-style:solid;border-width:1px;width:70px;display:inline-block">800g</div> +</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$4.00</td>
+            <td style="padding:5px;margin:auto;text-align:center;color:red;">Remove</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/cucumber.jpg" alt="cucumber" height="120px" width="120px" style="padding-right:5px;"> Cucumber</td>
+            <td style="padding:5px;margin:auto;text-align:center;">- <div style="border-style:solid;border-width:1px;width:70px;display:inline-block">1000g</div> +</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$7.20</td>
+            <td style="padding:5px;margin:auto;text-align:center;color:red;">Remove</td>
+        </tr>
+    </table>
+
+
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Customer sign out page{% endblock %}
+{% block content %}
+<div id="demo" class="carousel slide" data-ride="carousel" style="background-color: grey">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div style="text-align:center;" class="carousel-item active">
+      <img style="width:700px; height:300px" src="/static/img/fnv.jpg">
+    </div>
+    <div style="text-align:center;" class="carousel-item">
+      <img  style="width:700px; height:300px" src="/static/img/fnv1.jpg">
+    </div>
+    <div style="text-align:center;" class="carousel-item">
+      <img style="width:700px; height:300px" src="/static/img/fnv2.jpg">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+<div style="margin:auto;align:center;">
+<div style="border-style:solid;border-width:1px;width:400px;height:300px; margin-top:25px; margin-left:25px; margin-right:25px; padding:auto; text-align:left;display:inline-block;">
+<strong style=" font-size:3em;">Promotion items</strong>
+</div>
+<div style="border-style:solid;border-width:1px;width:400px;height:300px; margin-top:25px; margin-left:25px; margin-right:25px; padding:auto; text-align:left;display:inline-block;">
+<strong style=" font-size:3em;">Trending items</strong>
+</div>
+<div style="border-style:solid;border-width:1px;width:400px;height:300px; margin-top:25px; margin-left:25px; margin-right:25px; padding:auto; text-align:left;display:inline-block;">
+<strong style=" font-size:3em;">Special offers</strong>
+</div>
+</div>
+{% endblock %}

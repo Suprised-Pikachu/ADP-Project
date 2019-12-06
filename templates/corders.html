@@ -1,0 +1,102 @@
+{% extends "base_order.html" %}
+{% block title %}Contact us page{% endblock %}
+
+{% block content %}
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/porders">Pending Orders</a>
+  <a href="/corders">Completed Orders</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+<h2 style="margin:auto;margin-top:20px;margin-bottom:20px;text-align:center;">Completed orders</h2>
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<div style="text-align:center;border-style:solid;border-width:1px;margin:auto;width:50%;margin-top:40px;border-radius:25px;margin-bottom:20px;padding:40px 0 40px 0;">
+    <h2>Receipt</h2>
+    <h2>Order number: #R000003</h2>
+    <table style="text-align:center;margin:auto;border-width:1px;margin-top:30px;margin-bottom:30px;">
+        <tr>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center; ">Item</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Quantity</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Price</th>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/ronion.jpg" alt="red onion" height="40px" width="40px" style="padding-right:5px;">Red Onion</td>
+            <td style="padding:5px;margin:auto;text-align:center;">1000g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$3.00</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/carrot.jpg" alt="carrot" height="50px" width="50px" style="padding-right:5px;"> Carrot</td>
+            <td style="padding:5px;margin:auto;text-align:center;">800g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$4.00</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/cucumber.jpg" alt="cucumber" height="40px" width="40px" style="padding-right:5px;"> Cucumber</td>
+            <td style="padding:5px;margin:auto;text-align:center;">1000g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$7.20</td>
+        </tr>
+    </table>
+    <a class="nav-link" style="margin:auto;width:70%;margin-bottom:10px;background-color:#527FEF;color:white;padding:2px;text-align:center;margin-top:10px;" href="#">Unready</a>
+
+</div>
+<div style="text-align:center;border-style:solid;border-width:1px;margin:auto;width:50%;margin-top:40px;border-radius:25px;margin-bottom:20px;padding:40px 0 40px 0;">
+    <h2>Order number: #R000002</h2>
+    <table style="text-align:center;margin:auto;border-width:1px;margin-top:30px;">
+        <tr>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center; ">Item</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Quantity</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Price</th>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/banana.jpg" alt="banana" height="40px" width="40px" style="padding-right:5px;">Banana</td>
+            <td style="padding:5px;margin:auto;text-align:center;">1000g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$5.00</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/carrot.jpg" alt="carrot" height="50px" width="50px" style="padding-right:5px;"> Carrot</td>
+            <td style="padding:5px;margin:auto;text-align:center;">800g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$4.00</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/cabbage.jpg" alt="cucumber" height="40px" width="40px" style="padding-right:5px;"> Cabbage</td>
+            <td style="padding:5px;margin:auto;text-align:center;">1000g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$1.50</td>
+        </tr>
+    </table>
+ <a class="nav-link" style="margin:auto;width:70%;margin-bottom:10px;background-color:#527FEF;color:white;padding:2px;text-align:center;margin-top:10px;" href="#">Unready</a>
+</div>
+<div style="text-align:center;border-style:solid;border-width:1px;margin:auto;width:50%;margin-top:40px;border-radius:25px;margin-bottom:20px;padding:40px 0 40px 0;">
+    <h2>Receipt</h2>
+    <h2>Order number: #R000001</h2>
+    <table style="text-align:center;margin:auto;border-width:1px;margin-top:30px;margin-bottom:30px;">
+        <tr>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center; ">Item</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Quantity</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Price</th>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/ronion.jpg" alt="red onion" height="40px" width="40px" style="padding-right:5px;">Red Onion</td>
+            <td style="padding:5px;margin:auto;text-align:center;">1000g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$3.00</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/carrot.jpg" alt="carrot" height="50px" width="50px" style="padding-right:5px;"> Carrot</td>
+            <td style="padding:5px;margin:auto;text-align:center;">800g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$4.00</td>
+        </tr>
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="/static/img/cucumber.jpg" alt="cucumber" height="40px" width="40px" style="padding-right:5px;"> Cucumber</td>
+            <td style="padding:5px;margin:auto;text-align:center;">1000g</td>
+            <td style="padding:5px;margin:auto;text-align:center;">$7.20</td>
+        </tr>
+    </table>
+    <a class="nav-link" style="margin:auto;width:70%;margin-bottom:10px;background-color:#527FEF;color:white;padding:2px;text-align:center;margin-top:10px;" href="#">Unready</a>
+
+</div>
+
+<div style="margin:auto; color:blue;text-align:center;margin-bottom:30px;">
+<span style="color:black;">1</span>  2   3   4   5   6   7
+</div>
+{% endblock %}

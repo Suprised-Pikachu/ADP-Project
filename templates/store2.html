@@ -1,0 +1,833 @@
+{% extends 'base2.html' %}
+{% block style %}
+<style>
+    div.sidenav {width: 200px; background-color: #d6d6d7; padding-bottom: 20px;}
+    div.sidenav >  a.active{color: blue}
+    ul.side-nav {list-style-type: none; padding-top: 50px; font-size: 20px}
+    ul.side-nav > li {padding-top: 5px}
+    div.item {margin: 20px 20px; padding: 10px 30px; border: 1px grey solid; border-radius: 5px}
+    div.item > img {width: 150px; height: 150px; border: solid grey 1px}
+    .pageIndex{text-align: right; font-size: 20px; margin-top: 5px}
+    active {text-decoration: underline}
+    div.shop {margin-left: 30px}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<!-- navigation -->
+     <div class="column" style="width: 200px">
+            <div class="sidenav">
+                <ul class="side-nav">
+                <p>Categories</p>
+                <li>
+                    <a class="all" style="text-decoration: underline; color: blue">All</a>
+                </li>
+                <li>
+                    <a class="fruits">Fruits</a>
+                </li>
+                <li>
+                    <a class="vegetables">Vegetables</a>
+                </li>
+                </ul>
+            </div>
+         <p>Search:</p>
+         <input type="search" style="input">
+        </div>
+<!-- all -->
+     <div class="column all shop">
+        <div class="page1 page">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>Weight: 500g</p>
+                    <p>price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                </div>
+        </div>
+        <div class="page2 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+        </div>
+        <div class="page3 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="page4 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                </div>
+        </div>
+        <div class="page5 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+        </div>
+        <div class="pageIndex">
+            <span>page:
+                <a class="page1" style="text-decoration: underline; color: blue">1</a>
+                <a class="page2">2</a>
+                <a class="page3">3</a>
+                <a class="page4">4</a>
+                <a class="page5">5</a>
+            </span>
+        </div>
+        </div>
+<!-- fruits -->
+     <div class="column fruits shop" style="display: none">
+        <div class="page1 page">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>Weight: 500g</p>
+                    <p>price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/apple.jpg">
+                    <p>Name: Apples</p>
+                    <p>500g</p>
+                    <p>Price: $1.50</p>
+                </div>
+                </div>
+        </div>
+        <div class="page2 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/orange.jpg">
+                    <p>Name: Oranges</p>
+                    <p>400g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+        </div>
+        <div class="page3 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/peach.jpg">
+                    <p>Name: Peach</p>
+                    <p>600g</p>
+                    <p>Price: $2.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="pageIndex">
+            <span>page:
+                <a class="page1" >1</a>
+                <a class="page2">2</a>
+                <a class="page3">3</a>
+            </span>
+        </div>
+     </div>
+
+<!-- vegetables -->
+     <div class="column vegetables shop" style="display: none">
+        <div class="page1 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/carrot.jpg">
+                    <p>Name: Carrots</p>
+                    <p>700g</p>
+                    <p>Price: $1.20</p>
+                </div>
+                </div>
+        </div>
+        <div class="page2 page" style="display: none">
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>Weight: 750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+            <div class="row">
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                <div class="item column">
+                    <img src="/static/img/cabbage.jpg">
+                    <p>Name: Cabbage</p>
+                    <p>750g</p>
+                    <p>Price: $1.00</p>
+                </div>
+                </div>
+        </div>
+        <div class="pageIndex">
+            <span>page:
+                <a class="page1">1</a>
+                <a class="page2">2</a>
+            </span>
+        </div>
+     </div>
+</div>
+<div class="popup item0001 container-fluid" style="display: none; position: fixed; top:0; left:0 ; right:0; bottom: 0; background-color: rgba(255, 255, 255, 0.5)">
+    <div class="row popitem" style="padding: 50px; margin: 100px 100px 20px 100px; border-radius: 10px; background-color: #d6d6d7">
+        <img src='/static/img/exit.png' style="width:50px; height:50px; position: absolute; top:0; right:0; margin-right: 115px; margin-top: 100px" class="exit">
+        <div class="col-3" style="">
+            <img src="/static/img/apple.jpg" style="width: 200px; height: 200px;">
+        </div>
+        <div class="col-7" style="">
+            <p>Name: Apple</p>
+            <p>description</p>
+            <p>This is an apple, it is a fruit. </p>
+        </div>
+
+
+
+        <div class="w-100"></div>
+        <div class="column col-8" style="margin-top: 20px; margin-bottom: 50px">
+            <p>Price: $1.50</p>
+            <p>500g</p>
+            <p>Country of Origin:</p>
+            <p>China</p>
+        </div>
+        <div class=" column col-2" style="margin-top: 20px; margin-bottom: 50px; ">
+            <button class="btn btn-primary" style="float: right; margin-top: 150px">Add To Cart</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
+{% block functions %}
+<script>
+$(document).ready(function(){
+    $('a.all').on('click', function(){
+        $('.shop').hide();
+        $('.all.shop').show();
+        $('.page').hide();
+        $('.page1').show();
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).parents().siblings().children().css({'text-decoration': 'none', 'color': 'black'});
+        $('.pageIndex .page1').css({'text-decoration': 'underline', 'color': 'blue'});
+        $('.pageIndex .page1').siblings().css({'text-decoration': 'none', 'color': 'black'});
+    });
+    $('a.fruits').on('click', function(){
+        $('.shop').hide();
+        $('.fruits.shop').show();
+        $('.page').hide();
+        $('.page1').show();
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).parents().siblings().children().css({'text-decoration': 'none', 'color': 'black'});
+        $('.pageIndex .page1').css({'text-decoration': 'underline', 'color': 'blue'});
+        $('.pageIndex .page1').siblings().css({'text-decoration': 'none', 'color': 'black'});
+    });
+    $('a.vegetables').on('click', function(){
+        $('.shop').hide();
+        $('.vegetables.shop').show();
+        $('.page').hide();
+        $('.page1').show();
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).parents().siblings().children().css({'text-decoration': 'none', 'color': 'black'});
+        $('.pageIndex .page1').css({'text-decoration': 'underline', 'color': 'blue'});
+        $('.pageIndex .page1').siblings().css({'text-decoration': 'none', 'color': 'black'});
+    });
+    $('.pageIndex a').on('click', function(){
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).siblings().css({'text-decoration': 'none', 'color': 'black'})
+        var select = '.' + $(this).attr('class');
+        $('.pageIndex').siblings().hide();
+        $(select).show();
+    });
+
+    $('.pageIndex a').on('mouseenter', function(){
+        $(this).css({fontSize : '25px', color: 'blue'});
+        $('.pageIndex').css({marginTop: '0px'});
+    }).on('mouseleave', function(){
+        $(this).css({fontSize : '20px', color: 'black'});
+        $('.pageIndex').css({marginTop: '5px'});
+    });
+
+    $('.item').on('click', function(){
+        $('.popup').show('fast');
+    });
+    $('.exit').on('click', function(){
+        $('.popup').hide();
+    });
+
+    $('.item').on('mouseenter', function(){
+       $(this).css({transform: 'scale(1.15)'});
+    }).on('mouseleave', function(){
+        $(this).css({transform: 'scale(1)'});
+    });
+
+    $('.sidenav a').on('mouseenter', function(){
+        $(this).css({color: 'blue'});
+    }).on('mouseleave' ,function(){
+        $(this).css({color: 'black'});
+    });
+});
+
+
+</script>
+{% endblock %}
