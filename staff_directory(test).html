@@ -1,0 +1,61 @@
+{% extends "base_admin.html" %}
+{% block title %}Staff directory{% endblock %}
+{% block content %}
+<h1 class="display-4" align="center">Staff directory</h1>
+<br>
+
+<table border="1" align="center" style="margin-bottom:20px">
+    <td style="text-align:left; padding:5px 100px 5px 100px"><input type="search" placeholder="search staff name"><img width="20px" height="20px" src="/static/img/search_icon.png"></td><td style="margin-right:40%;">
+    <!--form method="post" action="/addStaff"><input type="button" value="Add staff"></form-->
+    <a href="/addStaff">Add Staff</a>
+    </td>
+</table>
+<div>
+    {% if count == 0 %}
+    <p>There are no users.</p>
+    {% elif count == 1 %}
+    <p>There is 1 user.</p>
+    {% else %}
+    <p>There are {{ count }} users.</p>
+    {% endif %}
+</div>
+<div>
+<table border="1" align="center" bgcolor='white' style="margin-bottom:50px">
+    <thead>
+    <tr align="center">
+        <th style="font-size:15px; padding:">Staff ID</th>
+        <th>Staff name</th>
+        <th>Staff email</th>
+        <th>Staff contact no.</th>
+        <th>Edit</th>
+        <th>Remarks</th>
+    </tr>
+    </thead>
+    <tbody>
+     {% for user in staffList %}
+     <tr>
+     <td>{{ user.get_staffID() }}</td>
+     <td>{{ user.get_firstName() }}</td>
+     <td>{{ user.get_lastName() }}</td>
+     {% if user.get_membership() == "F" %}
+     <td>Fellow</td>
+     {% elif user.get_membership() == "S" %}
+     <td>Senior</td>
+     {% elif user.get_membership() == "P" %}
+     <td>Professional</td>
+     {% endif %}
+     <td>{{ user.get_gender() }}</td>
+     <td>{{ user.get_remarks() }}</td>
+     <td><a href="/updateStaff/{{user.get_staffID()}}" class="btn btn-warning">Update</a></td>
+     <td>
+     <form action="{{url_for('deleteStaff', id=user.get_staffID())}}" method="POST">
+     <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">
+     </form>
+     </td>
+     </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
