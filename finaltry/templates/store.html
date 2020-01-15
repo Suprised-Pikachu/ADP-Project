@@ -1,0 +1,302 @@
+{% extends 'base.html' %}
+{% block style %}
+<style>
+    div.sidenav {width: 200px; background-color: #d6d6d7; padding-bottom: 20px;}
+    div.sidenav >  a.active{color: blue}
+    ul.side-nav {list-style-type: none; padding-top: 50px; font-size: 20px}
+    ul.side-nav > li {padding-top: 5px}
+    div.item {margin: 20px 20px; padding: 10px 30px; border: 1px grey solid; border-radius: 5px}
+    div.item > img {width: 150px; height: 150px; border: solid grey 1px}
+    .pageIndex{text-align: right; font-size: 20px; margin-top: 5px}
+    active {text-decoration: underline}
+    div.shop {margin-left: 30px}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<!-- navigation -->
+     <div class="column" style="width: 200px">
+            <div class="sidenav">
+                <ul class="side-nav">
+                <p>Categories</p>
+                <li>
+                    <a class="all" style="text-decoration: underline; color: blue">All</a>
+                </li>
+                <li>
+                    <a class="fruits">Fruits</a>
+                </li>
+                <li>
+                    <a class="vegetables">Vegetables</a>
+                </li>
+                </ul>
+            </div>
+         <p>Search:</p>
+         <input type="search" style="input">
+        </div>
+<!-- all -->
+     <div class="column all shop">
+          {% for page in range(1, (((product_list|length//10)-1)+3)) %}
+            {% if page == 1 %}
+                <div class="page{{ page }} page">
+            {% endif %}
+                    {% if page*10 > product_list|length %}
+                        {% if page != 1 %}
+                        <div class="page{{ page }} page" style="display:none">
+                        {% endif %}
+                    {% for product in range(1+10*(page-1), product_list|length+1) %}
+                    {% if product-10*(page-1) == 1 %}
+                    <div class="row">
+                        {% elif product-10*(page-1) == 6 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        <div class="item column" id="{{ product_list[product-1].get_product_id() }}">
+                            <img src="data:image/png;base64,{{ product_list[product-1].get_image() }}">
+                            <p>Name: {{ product_list[product-1].get_name() }}</p>
+                            <p>{{ product_list[product-1].get_unit() }}</p>
+                            <p>Price: ${{ product_list[product-1].get_price() }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {% for product in range(1+10*(page-1), 10*page+1) %}
+                    {% if product-10*(page-1) == 1 %}
+                    <div class="row">
+                        {% elif product-10*(page-1) == 6 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        <div class="item column" id="{{ product_list[product-1].get_product_id() }}">
+                            <img src="data:image/png;base64,{{ product_list[product-1].get_image() }}">
+                            <p>Name: {{ product_list[product-1].get_name() }}</p>
+                            <p>{{ product_list[product-1].get_unit() }}</p>
+                            <p>Price: ${{ product_list[product-1].get_price() }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                    {% endfor %}
+
+        <div class="pageIndex">
+        <span>page:
+        {% for page in range(1, (((product_list|length//10)-1)+3)) %}
+            <a class="page{{ page }}">{{ page }}</a>
+        {% endfor %}
+        </span>
+        </div>
+
+
+     </div>
+<!-- fruits -->
+     <div class="column fruits shop" style="display:none">
+          {% for page in range(1, (((fruit_list|length//10)-1)+3)) %}
+            {% if page == 1 %}
+                <div class="page{{ page }} page">
+            {% endif %}
+                    {% if page*10 > fruit_list|length %}
+                        {% if page != 1 %}
+                        <div class="page{{ page }} page" style="display:none">
+                        {% endif %}
+                    {% for product in range(1+10*(page-1), fruit_list|length+1) %}
+                    {% if product-10*(page-1) == 1 %}
+                    <div class="row">
+                        {% elif product-10*(page-1) == 6 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        <div class="item column" id="{{ fruit_list[product-1].get_product_id() }}">
+                            <img src="data:image/png;base64,{{ fruit_list[product-1].get_image() }}">
+                            <p>Name: {{ fruit_list[product-1].get_name() }}</p>
+                            <p>{{ fruit_list[product-1].get_unit() }}</p>
+                            <p>Price: ${{ fruit_list[product-1].get_price() }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {% for product in range(1+10*(page-1), 10*page+1) %}
+                    {% if product-10*(page-1) == 1 %}
+                    <div class="row">
+                        {% elif product-10*(page-1) == 6 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        <div class="item column" id="{{ fruit_list[product-1].get_product_id() }}">
+                            <img src="data:image/png;base64,{{ fruit_list[product-1].get_image() }}">
+                            <p>Name: {{ fruit_list[product-1].get_name() }}</p>
+                            <p>{{ fruit_list[product-1].get_unit() }}</p>
+                            <p>Price: ${{ fruit_list[product-1].get_price() }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                    {% endfor %}
+        <div class="pageIndex">
+        <span>page:
+        {% for page in range(1, (((fruit_list|length//10)-1)+3)) %}
+            <a class="page{{ page }}">{{ page }}</a>
+        {% endfor %}
+        </span>
+        </div>
+     </div>
+         <!-- vegetables -->
+     <div class="column vegetables shop" style="display: none">
+          {% for page in range(1, (((vegetable_list|length//10)-1)+3)) %}
+            {% if page == 1 %}
+                <div class="page{{ page }} page">
+            {% endif %}
+                    {% if page*10 > vegetable_list|length %}
+                        {% if page != 1 %}
+                        <div class="page{{ page }} page" style="display:none">
+                        {% endif %}
+                    {% for product in range(1+10*(page-1), vegetable_list|length+1) %}
+                    {% if product-10*(page-1) == 1 %}
+                    <div class="row">
+                        {% elif product-10*(page-1) == 6 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        <div class="item column" id="{{ vegetable_list[product-1].get_product_id() }}">
+                            <img src="data:image/png;base64,{{ vegetable_list[product-1].get_image() }}">
+                            <p>Name: {{ vegetable_list[product-1].get_name() }}</p>
+                            <p>{{ vegetable_list[product-1].get_unit() }}</p>
+                            <p>Price: ${{ vegetable_list[product-1].get_price() }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    {% for product in range(1+10*(page-1), 10*page+1) %}
+                    {% if product-10*(page-1) == 1 %}
+                    <div class="row">
+                        {% elif product-10*(page-1) == 6 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        <div class="item column" id="{{ vegetable_list[product-1].get_product_id() }}">
+                            <img src="data:image/png;base64,{{ vegetable_list[product-1].get_image() }}">
+                            <p>Name: {{ vegetable_list[product-1].get_name() }}</p>
+                            <p>{{ vegetable_list[product-1].get_unit() }}</p>
+                            <p>Price: ${{ vegetable_list[product-1].get_price() }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                    {% endfor %}
+        <div class="pageIndex">
+        <span>page:
+        {% for page in range(1, (((vegetable_list|length//10)-1)+3)) %}
+            <a class="page{{ page }}">{{ page }}</a>
+        {% endfor %}
+        </span>
+        </div>
+     </div>
+     </div>
+{% for product in product_list %}
+<div class="popup container-fluid item-{{ product.get_product_id() }}" style="display: none; position: fixed; top:0; left:0 ; right:0; bottom: 0; background-color: rgba(255, 255, 255, 0.5)">
+    <div class="row popitem" style="padding: 50px; margin: 100px 100px 20px 100px; border-radius: 10px; background-color: #d6d6d7">
+        <img src='/static/img/exit.png' style="width:50px; height:50px; position: absolute; top:0; right:0; margin-right: 115px; margin-top: 100px" class="exit">
+        <div class="col-3" style="">
+            <img src="data:image/png;base64,{{ product.get_image() }}" style="width: 200px; height: 200px;" class="item-image">
+        </div>
+        <div class="col-7" style="">
+            <p class="item-name">{{ product.get_name() }}</p>
+            <p>description</p>
+            <p class="item-description">{{ product.get_description() }}</p>
+        </div>
+        <div class="w-100"></div>
+        <div class="column col-8" style="margin-top: 20px; margin-bottom: 50px">
+            <p class="item-price">Price: ${{ product.get_price() }}</p>
+            <p class="item-unit">{{ product.get_price() }}</p>
+        </div>
+        <div class=" column col-2" style="margin-top: 20px; margin-bottom: 50px; ">
+            <form action="{{url_for('addCart', id=product.get_product_id() )}}" method="POST">
+                <button class="btn btn-primary item-button" style="float: right; margin-top: 150px" type="submit" value="{{ product.get_product_id() }}">Add To Cart</button>
+            </form>
+        </div>
+    </div>
+</div>
+ {% endfor %}
+
+
+
+{% endblock %}
+
+{% block functions %}
+<script>
+$(document).ready(function(){
+
+    $('a.all').on('click', function(){
+        $('.shop').hide();
+        $('.all.shop').show();
+        $('.page').hide();
+        $('.page1').show();
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).parents().siblings().children().css({'text-decoration': 'none', 'color': 'black'});
+        $('.pageIndex .page1').css({'text-decoration': 'underline', 'color': 'blue'});
+        $('.pageIndex .page1').siblings().css({'text-decoration': 'none', 'color': 'black'});
+    });
+    $('a.fruits').on('click', function(){
+        $('.shop').hide();
+        $('.fruits.shop').show();
+        $('.page').hide();
+        $('.page1').show();
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).parents().siblings().children().css({'text-decoration': 'none', 'color': 'black'});
+        $('.pageIndex .page1').css({'text-decoration': 'underline', 'color': 'blue'});
+        $('.pageIndex .page1').siblings().css({'text-decoration': 'none', 'color': 'black'});
+    });
+    $('a.vegetables').on('click', function(){
+        $('.shop').hide();
+        $('.vegetables.shop').show();
+        $('.page').hide();
+        $('.page1').show();
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).parents().siblings().children().css({'text-decoration': 'none', 'color': 'black'});
+        $('.pageIndex .page1').css({'text-decoration': 'underline', 'color': 'blue'});
+        $('.pageIndex .page1').siblings().css({'text-decoration': 'none', 'color': 'black'});
+    });
+    $('.pageIndex a').on('click', function(){
+        $(this).css({'text-decoration': 'underline', 'color': 'blue'});
+        $(this).siblings().css({'text-decoration': 'none', 'color': 'black'})
+        var select = '.' + $(this).attr('class');
+        $('.pageIndex').siblings().hide();
+        $(select).show();
+    });
+
+    $('.pageIndex a').on('mouseenter', function(){
+        $(this).css({fontSize : '25px', color: 'blue'});
+        $('.pageIndex').css({marginTop: '0px'});
+    }).on('mouseleave', function(){
+        $(this).css({fontSize : '20px', color: 'black'});
+        $('.pageIndex').css({marginTop: '5px'});
+    });
+
+    $('.item').on('click', function(){
+        var popup = ".item-" + $(this).attr("id");
+        console.log(popup);
+        $(popup).show('fast');
+
+    });
+    $('.exit').on('click', function(){
+        $('.popup').hide();
+    });
+
+    $('.item').on('mouseenter', function(){
+       $(this).css({transform: 'scale(1.15)'});
+    }).on('mouseleave', function(){
+        $(this).css({transform: 'scale(1)'});
+    });
+
+    $('.sidenav a').on('mouseenter', function(){
+        $(this).css({color: 'blue'});
+    }).on('mouseleave' ,function(){
+        $(this).css({color: 'black'});
+    });
+});
+
+
+</script>
+{% endblock %}

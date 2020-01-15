@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+    table{margin-top:10px}
+    td > img{width: 45px; height: 45px}
+    td.image{padding: 5px 5px 5px 10px}
+    .blocker{position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(255,255,255,.5)}
+    .main{position: relative}
+</style>
+{% endblock %}
+
+{% block content %}
+    {% if product_listlength == 0 %}
+    <p>There are no items in the inventory</p>
+    {% else %}
+        <div class="search" style="float: right">
+            <label>Search</label>
+            <input type="search" id="searchInput" placeholder="Search...">
+        </div>
+        <table class="table table-striped" id="itemTable">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>image</th>
+                <th>Name</th>
+                <th>type</th>
+                <th>Price</th>
+                <th>Unit</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in product_list %}
+        <tr>
+            <td>{{ product.get_product_id() }}</td>
+            <td><img src="data:image/png;base64,{{ product.get_image() }}"></td>
+            <td>{{ product.get_name() }}</td>
+            <td>{{ product.get_type() }}</td>
+            <td>${{ product.get_price() }}</td>
+            <td>{{ product.get_unit() }}</td>
+            <td>{{ product.get_stock() }}</td>
+            <td><a href="/store_update/{{product.get_product_id()}}" class="btn-btn-warning">Update</a></td>
+            <td>
+                <form action="{{url_for('store_delete', id=product.get_product_id())}}" method="POST">
+                    <input type="submit" value="delete" class="btn btn-danger">
+                </form>
+            </td>
+        </tbody>
+        {% endfor %}
+    {% endif %}
+    </table>
+</div>
+{% endblock %}
+
+{% block functions %}
+<script>
+    $(document).ready(function(){
+
+        $('#searchInput').on('keyup', function(){
+            var search = $(this).val().toLowerCase();
+            $('.display-item').filter(function(){
+                $(this).toggle($(this).text().toLowerCase().indexOf(search) > -1);
+            });
+        });
+
+        $('#toggleEdit').on('click', function(){
+            if ($('.checkbox').length == 0){
+            $('.display-item').append("<td class='checkbox'><input type='checkbox'></td>");
+                }
+            else{
+            $('.checkbox').remove();
+                };
+        });
+    });
+
+</script>
+{% endblock %}

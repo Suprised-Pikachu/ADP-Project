@@ -1,0 +1,48 @@
+{% extends "base2.html" %}
+{% block title %}Contact us page{% endblock %}
+
+{% block content %}
+<div style="margin:auto;max-width:500px">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" style="margin:auto; width:100%;height:40px;text-align:center;">
+</div>
+<ul id="myUL" style="list-style:none;">
+{% for cart in prevList %}
+    <li><a href="#" style="display:none;">{{ ordernumList[prevList.index(cart)] }}</a>
+<div style="text-align:center;border-style:solid;border-width:1px;margin:auto;width:50%;margin-top:40px;border-radius:25px;margin-bottom:30px;padding:40px 0 40px 0;">
+    <h2>Order number: {{ ordernumList[prevList.index(cart)] }}</h2>
+    <table style="text-align:center;margin:auto;border-width:1px;margin-top:30px;">
+        <tr>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center; ">Item</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Quantity</th>
+            <th style="padding-left:50px;padding-right:50px;margin:auto;text-align: center;">Price</th>
+        </tr>
+        {% for items in cart[0] %}
+        <tr style="border-top:1px solid">
+            <td style="padding:5px;margin:auto;text-align:center;"><img src="data:image/png;base64,{{ cart[0][items].get_image() }}" height="120px" width="120px" style="padding-right:5px;">{{ cart[0][items].get_name() }}</td>
+            <td style="padding:5px;margin:auto;text-align:center;">{{ cart[0][items].get_quantity() }}</td>
+            <td style="padding:5px;margin:auto;text-align:center;">${{ cart[0][items].get_cost() }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    {% if statusList[prevList.index(cart)] == 'On the way' %}
+    <h4>Status : <span style="color:green; ">{{ statusList[prevList.index(cart)] }}</span></h4>
+    {% else %}
+    <h4>Status : <span style="color:#f0cc00 ">{{ statusList[prevList.index(cart)] }}</span></h4>
+    {% endif %}
+    <div class="container" style="margin:0;width:auto;padding:0;">
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#lol{{ ordernumList[prevList.index(cart)] }}" style="margin-bottom:25px;">View Details</button>
+      <div id="lol{{ ordernumList[prevList.index(cart)] }}" class="collapse" style="border-style:solid;border-width:1px;border-radius:0px;border-right-style:none;border-left-style:none;padding-bottom:20px;">
+        <h5 style="margin-top:10px;">Name: {{ cart[1].get_name() }}</h5>
+        <h5 style="margin-top:10px;">Address: {{ cart[1].get_address() }}</h5>
+        <h5 style="margin-top:10px;">Zip: {{ cart[1].get_zip() }}</h5>
+        <h5 style="margin-top:10px;">Total price: ${{ cart[1].get_totalpaid() }}</h5>
+        <h5 style="margin-top:10px;">Order date: ${{ cart[1].get_date() }}</h5>
+      </div>
+    </div>
+    </div>
+</li>
+{% endfor %}
+            </ul>
+{% endblock %}
+

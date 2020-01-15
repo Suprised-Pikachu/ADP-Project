@@ -1,0 +1,59 @@
+{% extends "base_admin.html" %}
+{% block title %}Staff directory{% endblock %}
+{% block content %}
+<body>
+<h1 class="display-4" align="center">Staff directory</h1>
+<br>
+<table border="1" align="center" style="margin-bottom:20px">
+    <td style="text-align:left; padding:5px 100px 5px 100px">Search Engine<img width="20px" height="20px" src="/static/img/search_icon.png"></td><td style="margin-right:40%;">Add staff<img width="20px" height="20px" src="/static/img/plus.png"></td>
+</table>
+<table border="1" align="center" bgcolor='white' style="margin-bottom:50px">
+    <thead>
+    <tr align="center">
+        <th style="font-size:15px; padding:">Staff ID</th>
+        <th>Staff name</th>
+        <th>Staff email</th>
+        <th>Staff contact no.</th>
+        <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>123456G</td>
+        <td>Lee Chit Boon</td>
+        <td>LeeCB@gmail.com</td>
+        <td>12345678</td>
+        <td>edit</td>
+    </tr>
+    <tr>
+        <td>456789A</td>
+        <td>Tan Ah Hock</td>
+        <td>TanAH@gmail.com</td>
+        <td>87654321</td>
+        <td>edit</td>
+    </tr>
+     <tr>
+        <td>456235Y</td>
+        <td>Maximillion</td>
+        <td>Max@yahoo.com</td>
+        <td>96753434</td>
+        <td>edit</td>
+    </tr>
+     <tr>
+        <td>787823R</td>
+        <td>Arron Stone</td>
+        <td>Stone@gmail.com</td>
+        <td>86767223</td>
+        <td>edit</td>
+    </tr>
+     <tr>
+        <td>346709X</td>
+        <td>Gumball Waterson</td>
+        <td>Gumball@yahoo.com</td>
+        <td>90651245</td>
+        <td>edit</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+{% endblock %}
