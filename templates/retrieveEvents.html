@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Retrieve Users{% endblock %}
+
+{% block content %}
+<h1 class="display-4">Retrieve Users</h1>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Event ID</th>
+                <th>Event Name</th>
+                <th>Date </th>
+                <th>Details</th>
+                <th>requirements</th>
+                <th>remarks</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for event in eventsList %}
+        <tr>
+            <td>{{ event.get_eventID() }}</td>
+            <td>{{ event.get_eventName() }}</td>
+            <td>{{ event.get_date() }}</td>
+            <td>{{ event.get_details() }}</td>
+            <td>{{ event.get_requirements() }}</td>
+            <td>{{ event.get_remarks() }}</td>
+            <td><a href="/updateEvents/{{event.get_eventID()}}" class="btn btn-warning">Update</a></td>
+            <td>
+                <form action="{{url_for('deleteEvent', id=event.get_eventID())}}" method="POST">
+                    <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
