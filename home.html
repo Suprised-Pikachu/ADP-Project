@@ -1,0 +1,20 @@
+{% extends "base.html" %}<!-- use base html -->
+{% block title %}Library Loan System - Home{% endblock %}
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <!-- Do something with the message -->
+            {{ message }}
+
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<h1 class="display-4">Home</h1>
+<p>Hello world!</p>
+
+<h2>{{ userType }}</h2>
+{% endblock %}
